@@ -3,6 +3,7 @@ config.*
 
 # env file
 /renv
+env.R
 
 # data
 /data 

@@ -15,13 +15,3 @@ apatheme=theme_bw()+
 
 
 path_data_raw <- here::here("data/raw", "datashare.csv")
-path_ret_raw <- here::here("data/raw", "ret.csv")
-path_bond_raw <- here::here("data/raw", "tb3ms.csv")
-
-path_data_premium_with_na <- here::here("data/processed", 
-                                        "data_premium_with_na.csv")
-path_data_premium_omitted <- here::here("data/processed", 
-                                        "data_premium_omitted.csv")
-
-#rm(list = ls())
-
