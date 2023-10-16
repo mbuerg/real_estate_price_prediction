@@ -2,4 +2,4 @@
 test project to predict housing 
 
 data source:
-https://www.kaggle.com/datasets/arslanali4343/real-estate-dataset
+https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques

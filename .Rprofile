@@ -1,5 +1,6 @@
 source("renv/activate.R")
 library(ggplot2)
+library(docstring)
 
 # Theme für plots:
 # https://bookdown.org/content/2015/figures.html
@@ -14,4 +15,7 @@ apatheme=theme_bw()+
         axis.text.x=element_text(size = 12))
 
 
-path_data_raw <- here::here("data/raw", "datashare.csv")
+path_data_train <- here::here("data", "train.csv")
+path_data_test <- here::here("data", "test.csv")
+path_data_sample_submission <- here::here("data", "sample_submission.csv")
+path_data_complete_imputated <- here::here("data", "data_complete_imputated.csv")
