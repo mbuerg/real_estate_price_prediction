@@ -1,6 +1,7 @@
 # visualization
 
-data_complete_imputated <- read.csv(path_data_complete_imputated)
+data_complete_imputated <- read.csv(path_data_complete_imputated
+                                    , stringsAsFactors = TRUE)
 
 ggplot(data=data_complete_imputated, aes(x=SalePrice, y=after_stat(density))) +
   geom_histogram(color="black", fill="blue") +

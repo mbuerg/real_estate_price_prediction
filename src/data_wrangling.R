@@ -29,4 +29,6 @@ data_complete$MiscFeature <- NULL
 data_complete_imputated <- missRanger::missRanger(data_complete, pmm.k=3)
 
 # write to hdd
-write.csv(data_complete_imputated,file = "data/data_complete_imputated.csv")
+write.csv(data_complete_imputated,file = "data/data_complete_imputated.csv"
+          , row.names=FALSE)
+
