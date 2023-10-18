@@ -26,7 +26,7 @@ data_complete$MiscFeature <- NULL
 
 # imputate missing values with random forest
 
-data_complete_imputated <- missRanger::missRanger(data_complete, pmm.k=3)
+# data_complete_imputated <- missRanger::missRanger(data_complete, pmm.k=3)
 
 # write to hdd
 write.csv(data_complete_imputated,file = "data/data_complete.csv"
