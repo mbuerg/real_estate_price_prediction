@@ -2,22 +2,24 @@
 
 create_dummies <- function(df
                            , trap=FALSE){
-  #' Deletes duplicate rows from data frame
+  #' Creates dummies for factors
   #' 
-  #' @description This function uses duplicated()-function to get rid of
-  #' rows that appear more than once in a data frame
+  #' @description This function creates Dummies for factor columns and
+  #' deletes the original columns
   #' 
   #'  
   #' @param df data frame
+  #' @param trap bool
   #' 
-  #' @usage clean_duplicate(df)
+  #' @usage create_dummies(df trap)
   #' 
-  #' @return Returns the input data frame without duplicated rows
+  #' @return Returns the input data frame without factor columns but with
+  #' dummies that replace the factor columns
   #' 
   #' @details None
   #' 
   #' @examples
-  #' clean_duplicates(df=data)
+  #' create_dummies(df=data, trap=TRUE)
   
   # Beschränke df auf cols mit Faktoren
   df_factors <- df[, (sapply(df, class) == "factor")]
@@ -50,10 +52,10 @@ create_dummies <- function(df
   
   names(dummies) <- dummy_names
   df_with_dummies <- cbind(df, dummies)
-  return(list(df_with_dummies, dummy_names, dummies))
+  return(df_with_dummies)
 }
 
-test <- create_dummies(data_complete_imputated)[[1]]
+#test <- create_dummies(data_complete_imputated)[[1]]
 
 
 

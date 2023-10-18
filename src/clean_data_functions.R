@@ -2,8 +2,6 @@
 
 # check on duplicates
 
-data_complete_imputated <- read.csv(path_data_complete_imputated)
-
 clean_duplicates <- function(df){
   #' Deletes duplicate rows from data frame
   #' 
@@ -27,10 +25,8 @@ clean_duplicates <- function(df){
   # if not the original data frame is the output
   df_no_duplicates <- df
   try(
-    df_no_duplicates <- df[!duplicated(df), silent=TRUE]
+    df_no_duplicates <- df[!duplicated(df)], silent=TRUE
     )
   
   return(df_no_duplicates)
 }
-
-clean_duplicates(data_complete_imputated)
